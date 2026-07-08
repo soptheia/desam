@@ -12,6 +12,6 @@ function add(i){let e=carrito.find(x=>x.name==productos[i].name);if(e)e.qty++;el
 function draw(){let r=document.getElementById('resumen');let t=0;r.innerHTML='';carrito.forEach(x=>{t+=x.qty*x.price;r.innerHTML+=`<div>${x.qty} x ${x.name} = $${(x.qty*x.price).toFixed(2)}</div>`});document.getElementById('total').textContent=t.toFixed(2);}
 buscar.oninput=e=>render(e.target.value);
 function limpiar(){carrito=[];draw();nombre.value='';direccion.value='';telefono.value='';}
-function enviar(){if(!carrito.length){alert('Sin productos');return;}let m='*Pedido Cremería de SAM*%0A';m+='Cliente: '+nombre.value+'%0ADirección: '+direccion.value+'%0ATeléfono: '+telefono.value+'%0A%0A';let t=0;carrito.forEach(x=>{m+=x.qty+' x '+x.name+' - $'+(x.qty*x.price).toFixed(2)+'%0A';t+=x.qty*x.price;});m+='%0ATotal: $'+t.toFixed(2);window.open('https://wa.me/523312880979?text='+m,'_blank');limpiar();}
+function enviar(){if(!carrito.length){alert('Sin productos');return;}let m='*Pedido Cremería de SAM*%0A';m+='Cliente: '+nombre.value+'%0ADirección: '+direccion.value+'%0ATeléfono: '+telefono.value+'%0A%0A';let t=0;carrito.forEach(x=>{m+=x.qty+' x '+x.name+' - $'+(x.qty*x.price).toFixed(2)+'%0A';t+=x.qty*x.price;});m+='%0ATotal: $'+t.toFixed(2);window.open('https://wa.me/523314596000?text='+m,'_blank');limpiar();}
 render();
 </script></body></html>
